@@ -1,0 +1,62 @@
+{
+  "name": "@houlagins/net-speed",
+  "version": "1.0.0",
+  "description": "Estimates client network speed",
+  "author": {
+    "name": "Randy Houlahan"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "DEBUG=true dist-builder",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "release": "yarn publish --access=public --tag latest",
+    "test:e2e:headless": "vue-cli-service test:e2e --headless"
+  },
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "browser": {
+    "./umd": "dist/legacy/umd/index.umd.min.js",
+    "./browser": "dist/browser/index.min.js",
+    "./": "dist/browser/index.min.js"
+  },
+  "unpkg": "dist/browser/index.min.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "dependencies": {
+    "core-js": "~3.6.5",
+    "lodash.mean": "~4.1.0",
+    "vue": "~2.6.12"
+  },
+  "devDependencies": {
+    "@houlagins/dist-builder": "~1.0.1",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/randyhoulahan/net-speed/issues"
+  },
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/esm/index.js",
+        "require": "./dist/legacy/cjs/index.common.cjs",
+        "default": "./dist/esm/index.js"
+      },
+      "./dist/legacy/umd/index.umd.min.js"
+    ]
+  },
+  "homepage": "https://github.com/randyhoulahan/net-speed/tree/master#readme",
+  "jsnext:main": "dist/esm/index.min.js",
+  "license": "MIT",
+  "readme": "https://github.com/randyhoulahan/net-speed/tree/master#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randyhoulahan/net-speed.git"
+  },
+  "source": "src/index.js",
+  "src": "src/index.js",
+  "umd": "dist/legacy/umd/index.umd.min.js",
+  "web": "dist/browser/index.min.js"
+}

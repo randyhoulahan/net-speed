@@ -16,7 +16,7 @@ yarn add @houlagins/net-speed
 
 npm install @houlagins/net-speed
 ```
-
+   hgjfhgfgfhj
 ## API
 
 ### default
